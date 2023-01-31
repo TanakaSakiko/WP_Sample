@@ -1,0 +1,74 @@
+/* ========================================
+  module / drawer.scss
+======================================== */
+.drawer {
+  &__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    &:checked ~ .drawer__btn {
+      top: rem(18);
+      right: rem(10);
+    }
+    &:checked ~ .drawer__btn .drawer__line {
+      background: transparent;
+      &::before,
+      &::after {
+        width: rem(25);
+        background: $white;
+      }
+      &::before {
+        top: 0;
+        transform: rotate(45deg);
+      }
+      &::after {
+        bottom: 0;
+        transform: rotate(-45deg);
+      }
+    }
+    &:checked ~ .drawer-nav {
+      right: 0;
+    }
+  }
+  &__btn {
+    display: inline-block;
+    position: fixed;
+    top: rem(16);
+    right: rem(16);
+    padding: rem(15) rem(5);
+    z-index: $layer-drawer + 1;
+  }
+  &__line {
+    display: block;
+    position: relative;
+    width: rem(32);
+    height: rem(2);
+    background: $white;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: rem(32);
+      height: rem(2);
+      background: $white;
+      transition: all 0.3s;
+    }
+    &:before {
+      top: rem(7);
+    }
+    &:after {
+      bottom: rem(7);
+    }
+  }
+  &__nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100vw;
+    height: 100vh;
+    transition: all 0.3s;
+    z-index: $layer-drawer;
+  }
+}

@@ -1,0 +1,35 @@
+/* ========================================
+  page / company
+======================================== */
+.company {
+  background: transparent url(../images/company/company_bg-sp.png) no-repeat center right calc(50% + #{rem(10)}) /
+  contain;
+  @include mq(md) {
+    background: transparent url(../images/company/company_bg-pc.png) no-repeat top 0 center / rem(1300) rem(615);
+  }
+  &__inner {
+    position: relative;
+    margin-bottom: rem(46);
+    @include mq(md) {
+      margin-top: rem(92);
+      margin-bottom: rem(11);
+    }
+  }
+  &__concept {
+    margin-top: rem(23);
+    @include mq(md) {
+      margin-top: rem(30);
+      margin-left: rem(6);
+    }
+  }
+  &__btn {
+    position: relative;
+    margin-top: rem(24);
+    text-align: center;
+    z-index: $layer-up;
+    @include mq(md) {
+      margin-left: 0;
+      margin-top: rem(29);
+    }
+  }
+}

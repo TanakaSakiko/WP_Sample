@@ -1,0 +1,47 @@
+/* ========================================
+  page / recruit-message.scss
+======================================== */
+.recruit-message {
+  padding-top: rem(42);
+  @include mq(md) {
+    padding-top: rem(118);
+  }
+  &__inner {
+    
+  }
+  &__title {
+    color: $primary-color;
+    font-size: rem(48);
+    font-weight: $bold;
+    text-align: center;
+    line-height: 1.18;
+    @include mq(md) {
+      font-size: rem(72);
+    }
+  }
+  &__subtitle {
+    margin-top: rem(13);
+    color: $primary-color;
+    font-size: rem(18);
+    text-align: center;
+    @include mq(md) {
+      margin-top: rem(11);
+      font-size: rem(32);
+      letter-spacing: 0.05em;
+    }
+  }
+  &__text {
+    margin-top: rem(13);
+    font-size: rem(15);
+    text-align: center;
+    line-height: 1.8;
+    @include mq(md) {
+      margin-top: rem(25);
+      font-size: rem(16);
+    }
+  }
+  &__picture {
+    max-width: rem(1440);
+    margin: rem(35) auto 0;
+  }
+}

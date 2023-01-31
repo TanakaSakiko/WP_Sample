@@ -1,0 +1,85 @@
+/* ========================================
+  page / recruit-detail.scss
+======================================== */
+.recruit-detail {
+  margin-top: rem(35);
+  @include mq(md) {
+    margin-top: rem(62);
+  }
+  &__inner {
+  }
+  &__wrap {
+    padding: rem(27) rem(20);
+    margin-top: rem(22);
+    border: 1px solid #b8aed5;
+    border-radius: 10px;
+    background: #fff;
+    @include mq(md) {
+      padding: rem(56) rem(95);
+      margin-top: rem(31);
+    }
+  }
+  &__title {
+    color: $primary-color;
+    font-size: rem(16);
+    font-weight: $bold;
+    text-align: center;
+    @include mq(md) {
+      color: #333;
+      font-size: rem(24);
+    }
+  }
+  &__list {
+    margin-top: rem(30);
+    @include mq(md) {
+      margin-top: rem(37);
+    }
+  }
+  &__item {
+    padding-bottom: rem(11);
+    border-bottom: 1px solid #ddd;
+    @include mq(md) {
+      display: flex;
+      padding-bottom: rem(23);
+    }
+    &:not(:first-child) {
+      margin-top: rem(17);
+      @include mq(md) {
+        margin-top: rem(26);
+      }
+    }
+    > dt {
+      font-size: rem(14);
+      font-weight: $bold;
+      @include mq(md) {
+        width: rem(162);
+        margin-top: rem(3);
+        margin-left: rem(20);
+        font-size: rem(15);
+      }
+    }
+    > dd {
+      margin-top: rem(1);
+      font-size: rem(14);
+      line-height: 1.8;
+      @include mq(md) {
+        width: calc(100% - #{rem(162)});
+        font-size: rem(15);
+      }
+    }
+  }
+  &__btn {
+    position: relative;
+    margin-top: rem(40);
+    text-align: center;
+    z-index: $layer-up;
+    @include mq(md) {
+      margin-top: rem(50);
+    }
+  }
+  &__text {
+    margin-top: rem(8);
+    font-size: rem(12);
+    text-align: center;
+  }
+}

@@ -1,0 +1,51 @@
+/* ========================================
+  module / news-item.scss
+======================================== */
+.news-item {
+  &__link {
+    display: inline-block;
+  }
+  &__content {
+    @include mq(md) {
+      display: flex;
+    }
+  }
+  &__header {
+    display: flex;
+  }
+  &__date {
+    font-size: rem(15);
+    letter-spacing: 0.1em;
+    @include mq(md) {
+      margin-top: rem(2);
+      font-size: rem(15);
+    }
+  }
+  &__label {
+    width: rem(82);
+    height: rem(19);
+    margin-left: rem(14);
+    font-size: rem(11);
+    text-align: center;
+    background: #E8E8E8;
+    border-radius: 50px;
+    line-height: rem(19);
+    @include mq(md) {
+      height: rem(22);
+      margin-left: rem(18);
+      font-size: rem(12);
+      line-height: rem(22);
+    }
+  }
+  &__title {
+    margin-top: rem(3);
+    font-size: rem(14);
+    line-height: (27 / 14);
+    letter-spacing: 0.04em;
+    @include mq(md) {
+      margin-top: rem(-3);
+      margin-left: rem(20);
+      font-size: rem(15);
+    }
+  }
+}

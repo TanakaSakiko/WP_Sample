@@ -1,0 +1,81 @@
+/* ========================================
+  page / company-profile.scss
+======================================== */
+.company-profile {
+  &__inner {
+    max-width: rem(600);
+    margin-top: rem(71);
+    margin-bottom: rem(45);
+    @include mq(md) {
+      max-width: 100%;
+      margin-top: rem(134);
+      margin-bottom: rem(104);
+    }
+  }
+  &__list {
+    margin-top: rem(40);
+    @include mq(md) {
+      margin-top: rem(48);
+    }
+  }
+  &__item {
+    padding-bottom: rem(17);
+    border-bottom: 1px solid #ddd;
+    @include mq(md) {
+      display: flex;
+      align-items: center;
+      padding-left: rem(30);
+      padding-bottom: rem(26);
+    }
+    &:not(:first-child) {
+      margin-top: rem(17);
+      @include mq(md) {
+        margin-top: rem(25);
+      }
+    }
+    > dt {
+      font-size: rem(16);
+      font-weight: $bold;
+      @include mq() {
+        width: rem(174);
+      }
+    }
+    > dd {
+      margin-top: rem(3);
+      font-size: rem(16);
+      @include mq(md) {
+        width: calc(100% - #{rem(174)});
+        font-size: rem(15);
+      }
+    }
+  }
+  &__map-wrap {
+    margin-top: rem(40);
+    @include mq(md) {
+      margin-top: rem(58);
+    }
+  }
+  &__map {
+    position: relative;
+    padding-top: 240 / 335 * 100%;
+    overflow: hidden;
+    @include mq(md) {
+      padding-top: 394 / 1110 * 100%;
+    }
+    > iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__map-link {
+    margin-top: rem(8);
+    font-size: rem(14);
+    letter-spacing: 0.04em;
+    @include mq(md) {
+      font-size: rem(16);
+    }
+  }
+}

@@ -1,0 +1,38 @@
+/* ========================================
+  page / recruit-movie.scss
+======================================== */
+.recruit-movie {
+  margin-top: rem(76);
+  padding-bottom: rem(80);
+  @include mq(md) {
+    margin-top: rem(132);
+    padding-bottom: rem(111);
+  }
+  &__movie {
+    max-width: rem(600);
+    width: 100%;
+    height: rem(188);
+    margin: rem(23) auto 0;
+    background: #EBEBEB;
+    @include mq(md) {
+      max-width: 100%;
+      height: rem(624);
+      margin-top: rem(30);
+    }
+  }
+  &__iframe-wrap {
+    position: relative;
+    padding-top: 188 / 335 * 100%;
+    overflow: hidden;
+    @include mq(md) {
+      padding-top: 624 / 1110 * 100%;
+    }
+    > iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

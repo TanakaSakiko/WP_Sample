@@ -1,0 +1,39 @@
+/* ========================================
+  page / news.scss
+======================================== */
+.news {
+  padding-top: rem(36);
+  @include mq(md) {
+    padding-top: rem(69);
+  }
+  &__inner {
+    max-width: rem(600);
+    margin: 0 auto;
+    @include mq(md) {
+      display: flex;
+      max-width: calc(#{rem(917)} + #{$padding-pc} * 2);
+    }
+  }
+  &__title {
+    @include mq(md) {
+      margin-top: rem(-3);
+      margin-left: rem(-3);
+      text-align-last: left;
+    }
+  }
+  &__list {
+    margin: rem(34) auto 0;
+    @include mq(md) {
+      margin-top: 0;
+      margin-left: rem(55);
+    }
+  }
+  &__item {
+    &:not(:first-child) {
+      margin-top: rem(34);
+      @include mq(md) {
+        margin-top: rem(10);
+      }
+    }
+  }
+}

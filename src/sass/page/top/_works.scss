@@ -1,0 +1,97 @@
+/* ========================================
+  page / works.scss
+======================================== */
+.works {
+  padding: rem(51) $padding-sp rem(100);
+  background: linear-gradient($white 0% 26.1%, $background-color 26.1% 93.6%, $white 93.6% 100%);
+  @include mq(md) {
+    padding: 0 $padding-pc rem(60);
+    background: 0;
+  }
+  &__inner {
+    max-width: rem(600);
+    margin: 0 auto;
+    @include mq(md) {
+      position: relative;
+      display: flex;
+      align-items: center;
+      max-width: rem(1261);
+      padding: rem(60) 0 rem(80);
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: rem(837);
+        height: 100%;
+        background: $background-color;
+        z-index: $layer-background;
+      }
+    }
+  }
+  &__slider {
+    position: relative;
+    @include mq(md) {
+      width: 59.4766%;
+    }
+  }
+  &__content {
+    margin-top: rem(39);
+    @include mq(md) {
+      width: rem(430);
+      padding-top: rem(14);
+      margin-top: 0;
+      margin-left: rem(20);
+    }
+  }
+  &__text {
+    margin-top: rem(25);
+    font-size: rem(14);
+    text-align: center;
+    line-height: 1.8;
+    @include mq(md) {
+      font-size: rem(15);
+    }
+  }
+  &__btn {position: relative;
+    margin-top: rem(25);
+    text-align: center;
+    z-index: $layer-up;
+  }
+}
+/* swiper */
+.swiper-slide {
+  position: relative;
+    padding-top: 510 / 750 * 100%;
+    overflow: hidden;
+    > img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+    }
+}
+.swiper-pagination.swiper-pagination-bullets {
+  right: 0;
+  margin-top: rem(3);
+  text-align: right;
+  @include mq(md) {
+    right: rem(2);
+    bottom: rem(-26);
+  }
+}
+.swiper-pagination-bullet {
+  width: rem(8);
+  height: rem(8);
+  border-radius: 50%;
+  background: #C0C0C0;
+  opacity: 1;
+  & + & {
+    margin-left: rem(8);
+  }
+  &.swiper-pagination-bullet-active {
+    background: $primary-color;
+  }
+}

@@ -1,0 +1,19 @@
+/* ========================================
+  page / page-contact
+======================================== */
+.page-contact {
+  margin-top: rem(37);
+  margin-bottom: rem(40);
+  @include mq(md) {
+    margin-top: rem(66);
+    margin-bottom: rem(73);
+  }
+  &__text {
+    font-size: rem(14);
+    text-align: center;
+    line-height: 1.65;
+    @include mq(md) {
+      font-size: rem(16);
+    }
+  }
+}

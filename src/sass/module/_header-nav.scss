@@ -1,0 +1,37 @@
+/* ========================================
+  module / header-nav.scss
+======================================== */
+.header-nav {
+  &__list {
+    display: flex;
+    > li {
+      &:not(:first-child) {
+        margin-left: rem(25);
+      }
+      > a {
+        position: relative;
+        display: inline-block;
+        color: $white;
+        font-size: rem(15);
+        font-weight: $bold;
+        line-height: rem(65);
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: rem(17);
+          left: 0;
+          width: 100%;
+          height: rem(1);
+          background: $white;
+          transform: scale(0, 1);
+          transition: transform 0.3s;
+        }
+        &:hover {
+          &::after {
+            transform: scale(1, 1);
+          }
+        }
+      }
+    }
+  }
+}

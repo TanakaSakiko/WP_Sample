@@ -1,0 +1,55 @@
+/* ========================================
+  page / archive-news.scss
+======================================== */
+.archive-news {
+  padding-top: rem(42);
+  padding-bottom: rem(79);
+  @include mq(md) {
+    padding-top: rem(58);
+    padding-bottom: rem(110);
+  }
+  &__list {
+    max-width: rem(600);
+    margin: 0 auto;
+    @include mq(md) {
+      max-width: rem(910);
+      padding-left: rem(2);
+    }
+  }
+  &__item {
+    &:not(:first-child) {
+      margin-top: rem(24);
+      @include mq(md) {
+        margin-top: rem(10);
+      }
+    }
+  }
+}
+.wp-pagenavi {
+  margin-top: rem(40);
+  text-align: center;
+  @include mq(md) {
+    margin-top: rem(35);
+  }
+  .current,
+  .page {
+    display: inline-block;
+    width: rem(45);
+    height: rem(45);
+    margin: 0 rem(3);
+    font-size: rem(20);
+    font-weight: $bold;
+    border-radius: 50%;
+    text-align: center;
+    line-height: rem(40);
+    border: 0;
+  }
+  .current {
+    color: #4F31A5;
+    background: #F1EBF8;
+  }
+  .page {
+    color: $white;
+    background: linear-gradient(180deg, #7633A4, #250D65);
+  }
+}

@@ -1,0 +1,37 @@
+/* ========================================
+  page / contact.scss
+======================================== */
+.contact {
+  padding-top: rem(58);
+  padding-bottom: rem(60);
+  background: $background-color;
+  @include mq(md) {
+    padding-top: rem(76);
+    padding-bottom: rem(78);
+  }
+  .l-section__title {
+    @include mq(md) {
+      font-size: rem(34);
+      letter-spacing: 0.0179em;
+    }
+  }
+  &__text {
+    margin-top: rem(26);
+    font-size: rem(14);
+    text-align: center;
+    line-height: 1.8;
+    @include mq(md) {
+      margin-top: rem(28);
+      font-size: rem(15);
+    }
+  }
+  &__btn {
+    position: relative;
+    margin-top: rem(22);
+    text-align: center;
+    z-index: $layer-up;
+    @include mq(md) {
+      margin-top: rem(27);
+    }
+  }
+}

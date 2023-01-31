@@ -1,0 +1,16 @@
+/* ========================================
+  module / header-logo.scss
+======================================== */
+.header-logo {
+  &__link {
+    line-height: rem(65);
+    display: inline-block;
+    color: $white;
+    font-size: rem(18);
+    font-weight: $bold;
+    letter-spacing: 0.0177em;
+    @include mq(md) {
+      font-size: rem(24);
+    }
+  }
+}

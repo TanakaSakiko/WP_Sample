@@ -1,0 +1,78 @@
+/* ========================================
+  page / page-service.scss
+======================================== */
+.page-service {
+  padding-top: rem(40);
+  padding-bottom: rem(80);
+  @include mq(md) {
+    padding-top: rem(68);
+  }
+  &__inner {
+  }
+  &__list {
+    max-width: rem(400);
+    margin: 0 auto;
+    @include mq(md) {
+      max-width: 100%;
+    }
+  }
+  &__item {
+    @include mq(md) {
+      display: flex;
+    }
+    &:not(:first-child) {
+      margin-top: rem(45);
+      @include mq(md) {
+        margin-top: rem(60);
+      }
+    }
+  }
+  &__picture-wrap {
+    @include mq(md) {
+      width: rem(445);
+    }
+  }
+  &__picture {
+    position: relative;
+    padding-top: 211 / 335 * 100%;
+    overflow: hidden;
+    @include mq(md) {
+      padding-top: 280 / 445 * 100%;
+    }
+    > img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__text-wrap {
+    margin-top: rem(18);
+    @include mq(md) {
+      margin-top: 0;
+      margin-left: auto;
+      width: calc(100% - #{rem(445)} - #{rem(50)});
+    }
+  }
+  &__title {
+    font-size: rem(18);
+    font-weight: $bold;
+    text-align: center;
+    letter-spacing: 0.05em;
+    @include mq(md) {
+      font-size: rem(24);
+      text-align-last: left;
+    }
+  }
+  &__text {
+    margin-top: rem(8);
+    font-size: rem(14);
+    line-height: 1.78;
+    letter-spacing: 0.05em;
+    @include mq(md) {
+      margin-top: rem(10);
+      font-size: rem(15);
+      line-height: 1.8;
+    }
+  }
+}

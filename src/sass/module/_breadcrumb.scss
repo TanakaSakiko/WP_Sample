@@ -1,0 +1,39 @@
+/* ========================================
+  module / breadcrumb
+======================================== */
+.breadcrumb {
+  padding-left: $padding-sp;
+  padding-right: $padding-sp;
+  background: $background-color;
+  @include mq(md) {
+    height: rem(45);
+    padding-left: $padding-pc;
+    padding-right: $padding-pc;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    > li {
+      position: relative;
+      &:not(:last-child) {
+        padding-right: rem(20);
+        &::after {
+          position: absolute;
+          content: ">";
+          top: rem(5);
+          right: rem(7);
+          font-size: rem(8);
+        }
+      }
+      > span {
+        font-size: rem(11);
+        letter-spacing: 0.05em;
+        @include mq(md) {
+          font-size: rem(12);
+          letter-spacing: 0.06em;
+        }
+      }
+    }
+  }
+}

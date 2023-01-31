@@ -1,0 +1,75 @@
+/* ========================================
+  page / recruit.scss
+======================================== */
+.recruit {
+  padding-bottom: rem(80);
+  @include mq(md) {
+    padding-top: rem(55);
+    padding-bottom: rem(50);
+  }
+  &__wrap {
+    max-width: rem(600);
+    margin: 0 auto;
+    padding-bottom: rem(50);
+    background: $background-color;
+    @include mq(md) {
+      max-width: 100%;
+      background: 0;
+    }
+  }
+  %recruit__picture {
+    position: relative;
+    overflow: hidden;
+    > img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__picture {
+    @extend %recruit__picture;
+    &--sp {
+      @extend %recruit__picture;
+      padding-top: 140 / 375 * 100%;
+    }
+    &--pc {
+      @extend %recruit__picture;
+      width: rem(665);
+      padding-top: 340 / 1110 * 100%;
+    }
+  }
+  &__inner {
+    @include mq(md) {
+      display: flex;
+      max-width: calc(#{rem(1110)} + #{$padding-pc} * 2);
+      margin: 0 auto;
+    }
+  }
+  &__content {
+    padding-top: rem(56);
+    @include mq(md) {
+      background: $background-color;
+      width: rem(445);
+      padding-top: rem(66);
+    }
+  }
+  &__text {
+    margin-top: rem(27);
+    text-align: center;
+    font-size: rem(14);
+    @include mq(md) {
+      font-size: rem(15);
+    }
+  }
+  &__btn {
+    position: relative;
+    margin-top: rem(28);
+    text-align: center;
+    z-index: $layer-up;
+    @include mq(md) {
+      margin-left: 0;
+      margin-top: rem(27);
+    }
+  }
+}

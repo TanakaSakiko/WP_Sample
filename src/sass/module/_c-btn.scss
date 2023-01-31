@@ -1,0 +1,43 @@
+/* ========================================
+  module / c-btn.scss
+======================================== */
+%c-btn {
+  display: inline-block;
+  color: $white;
+  font-weight: $bold;
+  background: transparent;
+  border-radius: 50px;
+  border: 1px solid transparent;
+  transition: all 0.3s;
+  &:hover {
+    color: #250D65;
+    border: 1px solid #250D65;
+    background: $white;
+    opacity: 1;
+  }
+}
+.c-btn {
+  @extend %c-btn;
+  position: relative;
+  padding: rem(22) rem(75) rem(22) rem(78);
+  font-size: rem(14);
+  border: 1px solid transparent;
+  background: 0;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #7633A4, #250D65);
+    border-radius: 50px;
+    z-index: $layer-background;
+  }
+  &--transparent {
+    @extend %c-btn;
+    padding: rem(20) rem(68);
+    font-size: rem(15);
+    border: 1px solid $white;
+  }
+}

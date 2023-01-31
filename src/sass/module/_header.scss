@@ -1,0 +1,44 @@
+/* ========================================
+  module / header.scss
+======================================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: rem(62);
+  background: transparent;
+  z-index: $layer-header;
+  transition: background-color 0.3s;
+  @include mq(md) {
+    height: rem(65);
+    padding: 0 $padding-pc;
+  }
+  &.is-scroll {
+    padding-top: 0;
+    background: #21054d;
+  }
+  /* 下層ページのheader */
+  &--sub {
+    @include mq(md) {
+      padding-top: rem(12);
+    }
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    height: inherit;
+  }
+  &__logo {
+    margin-top: rem(1);
+    padding-left: rem(16);
+    /* 下層ページのheader__logo */
+    @include mq(md) {
+      padding-left: 0;
+      margin-left: rem(-2);
+    }
+  }
+  &__nav {
+    margin-left: auto;
+  }
+}

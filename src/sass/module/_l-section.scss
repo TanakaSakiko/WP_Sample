@@ -1,0 +1,33 @@
+/* ========================================
+  module / l-section.scss
+======================================== */
+%l-section__title {
+  color: $primary-color;
+  font-weight: $bold;
+  text-align: center;
+}
+.l-section {
+  padding: rem(40) 0;
+  @include mq(md) {
+    padding-bottom: rem(72);
+  }
+  &__title {
+    @extend %l-section__title;
+    font-size: rem(30);
+    @include mq(md) {
+      font-size: rem(36);
+    }
+    &--page {
+      @extend %l-section__title;
+      font-size: rem(24);
+      @include mq(md) {
+        font-size: rem(32);
+      }
+    }
+  }
+  &__subtitle {
+    @extend %l-section__title;
+    font-size: rem(13);
+    line-height: 1;
+  }
+}

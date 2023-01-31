@@ -1,0 +1,70 @@
+/* ========================================
+  page / archive_work.scss
+======================================== */
+.archive-work {
+  padding-top: rem(40);
+  padding-bottom: rem(80);
+  @include mq(md) {
+    padding-top: rem(70);
+    padding-bottom: rem(108);
+  }
+  &__inner {
+    padding-right: 15px;
+    padding-left: 15px;
+    @include mq(md) {
+      padding-right: $padding-pc;
+      padding-left: $padding-pc;
+    }
+  }
+  &__list {
+    max-width: rem(400);
+    margin: 0 auto;
+    @include mq(md) {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 100%;
+    }
+  }
+  &__item {
+    @include mq(md) {
+      width: calc(100% / 3 - #{rem(30)} * 2 / 3);
+    }
+    &:not(:first-child) {
+      margin-top: rem(36);
+      @include mq(md) {
+        margin-top: 0;
+      }
+    }
+    &:not(:nth-child(3n + 1)) {
+      @include mq(md) {
+        margin-left: rem(30);
+      }
+    }
+    &:nth-child(n + 4) {
+      @include mq(md) {
+        margin-top: rem(20);
+      }
+    }
+  }
+  &__picture {
+    position: relative;
+    padding-top: 235 / 345 * 100%;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    > img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__title {
+    margin-top: rem(14);
+    font-size: rem(16);
+    font-weight: $normal;
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+}

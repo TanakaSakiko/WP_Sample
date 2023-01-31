@@ -1,0 +1,22 @@
+/* ========================================
+  module / share.scss
+======================================== */
+.share {
+  display: flex;
+  flex-wrap: wrap;
+  &__facebook,
+  &__twitter,
+  &__hatena,
+  &__line {
+    display: inline-block;
+    margin-top: rem(5);
+  }
+  &__twitter,
+  &__hatena,
+  &__line {
+    margin-right: rem(20);
+  }
+  &__facebook {
+    margin-left: rem(-16);
+  }
+}

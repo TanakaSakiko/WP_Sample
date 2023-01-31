@@ -1,0 +1,48 @@
+/* ========================================
+  page / company-greeting
+======================================== */
+.company-greeting {
+  margin-top: rem(55);
+  @include mq(md) {
+    margin-top: rem(62);
+  }
+  &__inner {
+    max-width: rem(600);
+    @include mq(md) {
+      display: flex;
+      max-width: rem(1170);
+    }
+  }
+  &__picture-wrap {
+    @include mq(md) {
+      width: rem(445);
+    }
+  }
+  &__picture {
+    position: relative;
+    padding-top: 248 / 335 * 100%;
+    overflow: hidden;
+    > img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__message {
+    margin-top: rem(24);
+    @include mq(md) {
+      width: calc(100% - #{rem(445)} - #{rem(50)});
+      margin-top: rem(-5);
+      margin-left: auto;
+      padding-right: rem(10);
+    }
+    > p {
+      font-size: rem(14);
+      line-height: 1.75;
+      @include mq(md) {
+        font-size: rem(15);
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+//デスクトップのみ表示
+.u-pc {
+  display: none;
+  @include mq("md") {
+    display: block;
+  }
+}
+
+//モバイルのみ表示
+.u-sp {
+  @include mq("md") {
+    display: none;
+  }
+}

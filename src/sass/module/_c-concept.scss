@@ -1,0 +1,74 @@
+/* ========================================
+  module / concept.scss
+======================================== */
+.concept {
+  &__title {
+    font-size: rem(32);
+    text-align: center;
+    letter-spacing: 0.05em;
+    @include mq(md) {
+      font-size: rem(40);
+    }
+    > span {
+      position: relative;
+      display: inline-block;
+      &:first-child {
+        padding-right: rem(10);
+        @include mq(md) {
+          padding-right: rem(16);
+        }
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: rem(6);
+        left: 0;
+        width: 100%;
+        height: rem(8);
+        background: #f5f534;
+        z-index: $layer-background;
+      }
+    }
+  }
+  &__text {
+    position: relative;
+    margin-top: rem(30);
+    font-size: rem(14);
+    text-align: center;
+    line-height: 1.8;
+    z-index: $layer-up;
+    @include mq(md) {
+      font-size: rem(15);
+    }
+  }
+  // 下層ページのスタイル
+  &.company-page__concept {
+    .concept__title {
+      line-height: 1.25;
+      > span {
+        &:first-child {
+          margin-left: rem(-14);
+          @include mq(md) {
+            margin-left: 0;
+            padding-left: rem(10);
+          }
+        }
+        &:last-child {
+          @include mq(md) {
+            padding-right: rem(10);
+          }
+        }
+        &::after {
+          bottom: 0;
+        }
+      }
+    }
+    .concept__text {
+      margin-top: rem(36);
+      line-height: 1.7;
+      @include mq(md) {
+        margin-top: rem(27);
+      }
+    }
+  }
+}

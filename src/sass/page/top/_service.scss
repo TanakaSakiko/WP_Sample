@@ -1,0 +1,74 @@
+/* ========================================
+  page / service
+======================================== */
+.service {
+  padding-top: rem(30);
+  @include mq(md) {
+    padding-top: rem(60);
+    padding-bottom: rem(140);
+  }
+  &__list {
+    margin-top: rem(29);
+    @include mq(md) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: rem(30);
+    }
+  }
+  &__item {
+    max-width: rem(400);
+    margin: 0 auto;
+    @include mq(md) {
+      width: calc(33.3333% - #{rem(30)} * 2 / 3);
+    }
+    &:not(:first-child) {
+      margin-top: rem(40);
+      @include mq(md) {
+        margin-top: 0;
+        margin-left: rem(30);
+      }
+    }
+    &:nth-child(3n + 1) {
+      @include mq(md) {
+        margin-left: 0;
+      }
+    }
+  }
+  &__picture {
+    position: relative;
+    padding-top: 210 / 335 * 100%;
+    overflow: hidden;
+    > img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__title {
+    margin-top: rem(12);
+    font-size: rem(18);
+    font-weight: $bold;
+    text-align: center;
+    @include mq(md) {
+      margin-top: rem(22);
+    }
+  }
+  &__text {
+    margin-top: rem(4);
+    font-size: rem(14);
+    line-height: 1.65;
+    letter-spacing: 0.05em;
+    @include mq(md) {
+      margin-top: rem(10);
+      font-size: rem(15);
+      line-height: 1.75;
+    }
+  }
+  &__btn {
+    position: relative;
+    margin-top: rem(26);
+    text-align: center;
+    z-index: $layer-up;
+  }
+}

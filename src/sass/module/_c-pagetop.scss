@@ -1,0 +1,19 @@
+/* ========================================
+  module / c-pagetop
+======================================== */
+.pagetop {
+  position: fixed;
+  bottom: rem(20);
+  right: rem(20);
+  width: rem(50);
+  height: auto;
+  z-index: $layer-floating;
+  transition: opacity 0.3s;
+  @include mq(md) {
+    bottom: rem(46);
+    right: rem(46);
+  }
+  &:hover {
+    opacity: $hover-opacity;
+  }
+}

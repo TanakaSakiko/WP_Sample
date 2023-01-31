@@ -1,0 +1,24 @@
+/* ========================================
+  module / drawer-nav.scss
+======================================== */
+.drawer-nav {
+	position: relative;
+  background: linear-gradient(155deg, #642390, #19074A);
+  &__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    > li {
+      text-align: center;
+      > a {
+        display: block;
+        padding: rem(12) 0;
+        color: $white;
+        font-size: rem(15);
+        font-weight: $bold;
+      }
+    }
+  }
+}
